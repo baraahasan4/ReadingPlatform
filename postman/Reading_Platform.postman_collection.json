@@ -1,0 +1,2751 @@
+{
+	"info": {
+		"_postman_id": "f20cb481-92d9-4f9f-aabd-f0b2d7ef353d",
+		"name": "Reading_Platform",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24634016"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "adult",
+					"item": [
+						{
+							"name": "storimage",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2ODgzMjQ4NDYsImV4cCI6MTY4ODMyODQ0NiwibmJmIjoxNjg4MzI0ODQ2LCJqdGkiOiI2ZXN2NjU3TjJhU3NJOWJNIiwic3ViIjoiMiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.6lM4WBQMS3RRH4H-2Byp1H3BVzjKUcFbJUyEySfENwc",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/Aya/Pictures/الالوان والاستجابات البشرية.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/storeimage",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"storeimage"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetBooks",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2ODg0NjcxMjUsImV4cCI6MTY4ODQ3MDcyNSwibmJmIjoxNjg4NDY3MTI1LCJqdGkiOiJOZGwxSjVyenNva0dBbVl6Iiwic3ViIjoiMiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Zk6VEA5ooLUPs3fwtmFR4Zb5zpfnp6bD0zdYbnc6p3Q",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "category_id",
+											"value": "3",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:8000/api/GetBooks",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"GetBooks"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get_Books_Details",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2ODg0NjkyNDYsImV4cCI6MTY4ODQ3Mjg0NiwibmJmIjoxNjg4NDY5MjQ2LCJqdGkiOiJDbkcyUjg2Uk11bDl5VFNUIiwic3ViIjoiMiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.nEESStMxbi42MdwpNd0A1_DB01MzPToZJ2tJpsHwbLU",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2ODU0NDgyMTMsImV4cCI6MTY4NTQ1MTgxMywibmJmIjoxNjg1NDQ4MjEzLCJqdGkiOiI3V1RXY3dySmI0ZzlZbU52Iiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.E5P7H8K2igeZddkTh4deTpidsRFRN33Ri4kwyvhlUBo",
+										"type": "default",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "book_id",
+											"value": "3",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:8000/api/GetBooksDetails",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"GetBooksDetails"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getfavorite",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2ODgzMjU3NzAsImV4cCI6MTY4ODMyOTM3MCwibmJmIjoxNjg4MzI1NzcwLCJqdGkiOiJwT1lHZmlKcE0xcXE5cE5nIiwic3ViIjoiMiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.q1cE1S9vppjnZEX7VMhv_fUzzlYaJMmZmh9fNYS7vH4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/getUserFavorites",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"getUserFavorites"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "store_and_deletFavorite",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2ODgzMjU3NzAsImV4cCI6MTY4ODMyOTM3MCwibmJmIjoxNjg4MzI1NzcwLCJqdGkiOiJwT1lHZmlKcE0xcXE5cE5nIiwic3ViIjoiMiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.q1cE1S9vppjnZEX7VMhv_fUzzlYaJMmZmh9fNYS7vH4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "book_id",
+											"value": "8",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/store_and_deletFavorite",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"store_and_deletFavorite"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add_now_reading",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvcmVnaXN0ZXIiLCJpYXQiOjE2OTA0NjcxMTYsImV4cCI6MTY5MDQ3MDcxNiwibmJmIjoxNjkwNDY3MTE2LCJqdGkiOiJVUFdhdnpDR0dmSWZRVk5nIiwic3ViIjoiMTAiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.dM7O6YQle3W5i4R7SyA6BH-vRuje6D76gviSuFMikgk",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2ODU0NDYwMTAsImV4cCI6MTY4NTQ0OTYxMCwibmJmIjoxNjg1NDQ2MDEwLCJqdGkiOiJJdzZodnF6NG05VzA0OUlUIiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.wmzlOK0mjzf40k8cA1MR8aXIjWQpLeYgJFMiKQ-uvTw",
+										"type": "default",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "book_id",
+											"value": "7",
+											"type": "default"
+										},
+										{
+											"key": "current_page",
+											"value": "10004",
+											"type": "default"
+										},
+										{
+											"key": "total_pages",
+											"value": "10004",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:8000/api/add_now_reading",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"add_now_reading"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getUserNowReading",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2ODg1ODE0NjcsImV4cCI6MTY4ODU4NTA2NywibmJmIjoxNjg4NTgxNDY3LCJqdGkiOiJuc3h6S3htSlM5aE5uQkZXIiwic3ViIjoiMiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.jA_Tuz-i5XnwibbUvg7_8P4t_xmJm08395PcfEg9DYY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/getUserNowReading",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"getUserNowReading"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetCompletReading",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2ODgzMjU3NzAsImV4cCI6MTY4ODMyOTM3MCwibmJmIjoxNjg4MzI1NzcwLCJqdGkiOiJwT1lHZmlKcE0xcXE5cE5nIiwic3ViIjoiMiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.q1cE1S9vppjnZEX7VMhv_fUzzlYaJMmZmh9fNYS7vH4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/CompletReading",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"CompletReading"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getAudioBook",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2ODgzMjU3NzAsImV4cCI6MTY4ODMyOTM3MCwibmJmIjoxNjg4MzI1NzcwLCJqdGkiOiJwT1lHZmlKcE0xcXE5cE5nIiwic3ViIjoiMiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.q1cE1S9vppjnZEX7VMhv_fUzzlYaJMmZmh9fNYS7vH4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/getAudioBook",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"getAudioBook"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getAudioBookData",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2ODgzMjU3NzAsImV4cCI6MTY4ODMyOTM3MCwibmJmIjoxNjg4MzI1NzcwLCJqdGkiOiJwT1lHZmlKcE0xcXE5cE5nIiwic3ViIjoiMiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.q1cE1S9vppjnZEX7VMhv_fUzzlYaJMmZmh9fNYS7vH4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2ODU0NDgyMTMsImV4cCI6MTY4NTQ1MTgxMywibmJmIjoxNjg1NDQ4MjEzLCJqdGkiOiI3V1RXY3dySmI0ZzlZbU52Iiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.E5P7H8K2igeZddkTh4deTpidsRFRN33Ri4kwyvhlUBo",
+										"type": "default",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "book_id",
+											"value": "1",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/getAudioBookData",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"getAudioBookData"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "AddSuggest",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2ODgzMjU3NzAsImV4cCI6MTY4ODMyOTM3MCwibmJmIjoxNjg4MzI1NzcwLCJqdGkiOiJwT1lHZmlKcE0xcXE5cE5nIiwic3ViIjoiMiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.q1cE1S9vppjnZEX7VMhv_fUzzlYaJMmZmh9fNYS7vH4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "book_name",
+											"value": "انت لي",
+											"type": "default"
+										},
+										{
+											"key": "auther",
+											"value": "اية",
+											"type": "default"
+										},
+										{
+											"key": "typecategory",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/AddSuggest",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"AddSuggest"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getallbooks",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2ODgzMjU3NzAsImV4cCI6MTY4ODMyOTM3MCwibmJmIjoxNjg4MzI1NzcwLCJqdGkiOiJwT1lHZmlKcE0xcXE5cE5nIiwic3ViIjoiMiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.q1cE1S9vppjnZEX7VMhv_fUzzlYaJMmZmh9fNYS7vH4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/getallbooks",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"getallbooks"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "storeqoute",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2ODg0NjUzMTMsImV4cCI6MTY4ODQ2ODkxMywibmJmIjoxNjg4NDY1MzEzLCJqdGkiOiJWcTJaQUUxVFAzczNqSk1aIiwic3ViIjoiMiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.D8MfAGaKATn4UB7_eBWf1cLuuUu80LZ-oVmUDAJl4HY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "book_id",
+											"value": "5",
+											"type": "default"
+										},
+										{
+											"key": "quote",
+											"value": "llll6o",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/storeqoute",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"storeqoute"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deletqoute",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2ODg0NjUzMTMsImV4cCI6MTY4ODQ2ODkxMywibmJmIjoxNjg4NDY1MzEzLCJqdGkiOiJWcTJaQUUxVFAzczNqSk1aIiwic3ViIjoiMiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.D8MfAGaKATn4UB7_eBWf1cLuuUu80LZ-oVmUDAJl4HY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/deletqoute/2",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"deletqoute",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getqoute",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2ODgzMjU3NzAsImV4cCI6MTY4ODMyOTM3MCwibmJmIjoxNjg4MzI1NzcwLCJqdGkiOiJwT1lHZmlKcE0xcXE5cE5nIiwic3ViIjoiMiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.q1cE1S9vppjnZEX7VMhv_fUzzlYaJMmZmh9fNYS7vH4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/getqoute",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"getqoute"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "addLikeToBook",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2ODgzMjU3NzAsImV4cCI6MTY4ODMyOTM3MCwibmJmIjoxNjg4MzI1NzcwLCJqdGkiOiJwT1lHZmlKcE0xcXE5cE5nIiwic3ViIjoiMiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.q1cE1S9vppjnZEX7VMhv_fUzzlYaJMmZmh9fNYS7vH4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "book_id",
+											"value": "7",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/addLikeToBook",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"addLikeToBook"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getcountlike",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2ODgzMjU3NzAsImV4cCI6MTY4ODMyOTM3MCwibmJmIjoxNjg4MzI1NzcwLCJqdGkiOiJwT1lHZmlKcE0xcXE5cE5nIiwic3ViIjoiMiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.q1cE1S9vppjnZEX7VMhv_fUzzlYaJMmZmh9fNYS7vH4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "book_id",
+											"value": "7",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/getcountlike",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"getcountlike"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "addComment",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2ODgzMjU3NzAsImV4cCI6MTY4ODMyOTM3MCwibmJmIjoxNjg4MzI1NzcwLCJqdGkiOiJwT1lHZmlKcE0xcXE5cE5nIiwic3ViIjoiMiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.q1cE1S9vppjnZEX7VMhv_fUzzlYaJMmZmh9fNYS7vH4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "comment",
+											"value": "hi",
+											"type": "default"
+										},
+										{
+											"key": "book_id",
+											"value": "4",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/addComment",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"addComment"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getComments",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2ODgzMjU3NzAsImV4cCI6MTY4ODMyOTM3MCwibmJmIjoxNjg4MzI1NzcwLCJqdGkiOiJwT1lHZmlKcE0xcXE5cE5nIiwic3ViIjoiMiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.q1cE1S9vppjnZEX7VMhv_fUzzlYaJMmZmh9fNYS7vH4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "book_id",
+											"value": "4",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/getComments",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"getComments"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "addReply",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2ODgzMjU3NzAsImV4cCI6MTY4ODMyOTM3MCwibmJmIjoxNjg4MzI1NzcwLCJqdGkiOiJwT1lHZmlKcE0xcXE5cE5nIiwic3ViIjoiMiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.q1cE1S9vppjnZEX7VMhv_fUzzlYaJMmZmh9fNYS7vH4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "replay",
+										"value": "aya",
+										"type": "default",
+										"disabled": true
+									},
+									{
+										"key": "comment_id",
+										"value": "1",
+										"type": "default",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "replay",
+											"value": "hello",
+											"type": "default"
+										},
+										{
+											"key": "comment_id",
+											"value": "1",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/addReply",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"addReply"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getReplay",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2ODgzMjU3NzAsImV4cCI6MTY4ODMyOTM3MCwibmJmIjoxNjg4MzI1NzcwLCJqdGkiOiJwT1lHZmlKcE0xcXE5cE5nIiwic3ViIjoiMiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.q1cE1S9vppjnZEX7VMhv_fUzzlYaJMmZmh9fNYS7vH4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "comment_id",
+											"value": "1",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/getReplay",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"getReplay"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getMyQuestions",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2ODgzMjU3NzAsImV4cCI6MTY4ODMyOTM3MCwibmJmIjoxNjg4MzI1NzcwLCJqdGkiOiJwT1lHZmlKcE0xcXE5cE5nIiwic3ViIjoiMiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.q1cE1S9vppjnZEX7VMhv_fUzzlYaJMmZmh9fNYS7vH4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/getMyQuestions",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"getMyQuestions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Checkgoal",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2OTA0Njg3NDMsImV4cCI6MTY5MDQ3MjM0MywibmJmIjoxNjkwNDY4NzQzLCJqdGkiOiJGY1g5R3YyNUVrdlN5TGg3Iiwic3ViIjoiMTAiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.gDUSmOB75g66dgFN8IWMJpsGG-bluZTEebbTwZfNCVQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/checkgoal",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"checkgoal"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "set_goal",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2ODgzMjU3NzAsImV4cCI6MTY4ODMyOTM3MCwibmJmIjoxNjg4MzI1NzcwLCJqdGkiOiJwT1lHZmlKcE0xcXE5cE5nIiwic3ViIjoiMiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.q1cE1S9vppjnZEX7VMhv_fUzzlYaJMmZmh9fNYS7vH4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "goal",
+											"value": "1000",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/set_goal",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"set_goal"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "set_spentime",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2ODgzMjU3NzAsImV4cCI6MTY4ODMyOTM3MCwibmJmIjoxNjg4MzI1NzcwLCJqdGkiOiJwT1lHZmlKcE0xcXE5cE5nIiwic3ViIjoiMiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.q1cE1S9vppjnZEX7VMhv_fUzzlYaJMmZmh9fNYS7vH4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "spend_time",
+											"value": "910",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/set_spentime",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"set_spentime"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "goalprogress",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2ODgzNzM0MDksImV4cCI6MTY4ODM3NzAxMCwibmJmIjoxNjg4MzczNDEwLCJqdGkiOiJ4SnBPQU5YcjNCOGU2ajZMIiwic3ViIjoiMiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.u6u2HzP2oLukdNi2p4jKJ-6HvFahSQAtGs_7j5RTix0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/goalprogress",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"goalprogress"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deletecomment",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2ODgzNzQ2NjUsImV4cCI6MTY4ODM3ODI2NSwibmJmIjoxNjg4Mzc0NjY2LCJqdGkiOiJHU0pRdFY0ODlqdUs3a2g4Iiwic3ViIjoiMiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.yhwSIiRus1LvbYJlUaD-kWcJ_sLgFJMGwJyV1W0m0E8",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/deletecomment/1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"deletecomment",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getAllCategory",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2ODgzNzU1MjMsImV4cCI6MTY4ODM3OTEyMywibmJmIjoxNjg4Mzc1NTIzLCJqdGkiOiJ5SGowQVdjNUlGSDMyYUcwIiwic3ViIjoiMiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.KnV-zD3bcZsmoao15aQotNR860d-fygKELWpJRTrDmE",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/api/getAllCategory",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"getAllCategory"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "evaluation",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2ODgzNzU1MjMsImV4cCI6MTY4ODM3OTEyMywibmJmIjoxNjg4Mzc1NTIzLCJqdGkiOiJ5SGowQVdjNUlGSDMyYUcwIiwic3ViIjoiMiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.KnV-zD3bcZsmoao15aQotNR860d-fygKELWpJRTrDmE",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "evaluation",
+											"value": "4",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:8000/api/evaluation",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"evaluation"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "child",
+					"item": [
+						{
+							"name": "getEducationabooks",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2OTA0NTAxMzUsImV4cCI6MTY5MDQ1MzczNSwibmJmIjoxNjkwNDUwMTM1LCJqdGkiOiJZWXc5UWFqTkpkYXJob3prIiwic3ViIjoiNSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.8bnLimf4bKIGMitEaE9rvVy4w8kOucUFIkN88GfUYRo",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/getEducationalbooks",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"getEducationalbooks"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getEducationalSong",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/getEducationalSong",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"getEducationalSong"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getEducationalVideos",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2OTA0NTAxMzUsImV4cCI6MTY5MDQ1MzczNSwibmJmIjoxNjkwNDUwMTM1LCJqdGkiOiJZWXc5UWFqTkpkYXJob3prIiwic3ViIjoiNSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.8bnLimf4bKIGMitEaE9rvVy4w8kOucUFIkN88GfUYRo",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/getEducationalVideos",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"getEducationalVideos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getentertainingSong",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2OTA0NTAxMzUsImV4cCI6MTY5MDQ1MzczNSwibmJmIjoxNjkwNDUwMTM1LCJqdGkiOiJZWXc5UWFqTkpkYXJob3prIiwic3ViIjoiNSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.8bnLimf4bKIGMitEaE9rvVy4w8kOucUFIkN88GfUYRo",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/getentertainingSong",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"getentertainingSong"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getEntertainingVideos",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2OTA0NTAxMzUsImV4cCI6MTY5MDQ1MzczNSwibmJmIjoxNjkwNDUwMTM1LCJqdGkiOiJZWXc5UWFqTkpkYXJob3prIiwic3ViIjoiNSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.8bnLimf4bKIGMitEaE9rvVy4w8kOucUFIkN88GfUYRo",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/getEntertainingVideos",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"getEntertainingVideos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getEntertainingbooks",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2OTA0NTAxMzUsImV4cCI6MTY5MDQ1MzczNSwibmJmIjoxNjkwNDUwMTM1LCJqdGkiOiJZWXc5UWFqTkpkYXJob3prIiwic3ViIjoiNSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.8bnLimf4bKIGMitEaE9rvVy4w8kOucUFIkN88GfUYRo",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/getEntertainingbooks",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"getEntertainingbooks"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "addfavorite",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2OTA0NTAxMzUsImV4cCI6MTY5MDQ1MzczNSwibmJmIjoxNjkwNDUwMTM1LCJqdGkiOiJZWXc5UWFqTkpkYXJob3prIiwic3ViIjoiNSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.8bnLimf4bKIGMitEaE9rvVy4w8kOucUFIkN88GfUYRo",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "book_id",
+											"value": "2",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:8000/api/favorite",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"favorite"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getbookfavorite",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvcmVnaXN0ZXIiLCJpYXQiOjE2OTA0NTIxOTcsImV4cCI6MTY5MDQ1NTc5NywibmJmIjoxNjkwNDUyMTk3LCJqdGkiOiJZajZiek50WGRVVzZtbVZhIiwic3ViIjoiNiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Hoq01jz4o1NtJ5OHyh_-6Cn5tz4iN6IDbTPXvxu0_Eg",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/getbookfavorite",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"getbookfavorite"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "AddSuggestchild",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2OTA0NjcyOTYsImV4cCI6MTY5MDQ3MDg5NiwibmJmIjoxNjkwNDY3Mjk2LCJqdGkiOiJYb3VrT0x4aERkYlZmR3RpIiwic3ViIjoiNiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.vF7hi4IxzwLALHkXIoiaA1IufLJ1aEbO2MimD3kpZKg",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "book_name",
+											"value": "pp",
+											"type": "default"
+										},
+										{
+											"key": "auther",
+											"value": "plp",
+											"type": "default"
+										},
+										{
+											"key": "typecategory",
+											"value": "opiu",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:8000/api/AddSuggestchild",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"AddSuggestchild"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add_now_reading_Child",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2OTA0NjcyOTYsImV4cCI6MTY5MDQ3MDg5NiwibmJmIjoxNjkwNDY3Mjk2LCJqdGkiOiJYb3VrT0x4aERkYlZmR3RpIiwic3ViIjoiNiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.vF7hi4IxzwLALHkXIoiaA1IufLJ1aEbO2MimD3kpZKg",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "book_id",
+											"value": "4",
+											"type": "default"
+										},
+										{
+											"key": "current_page",
+											"value": "8",
+											"type": "default"
+										},
+										{
+											"key": "total_pages",
+											"value": "900",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/add_now_reading_Child",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"add_now_reading_Child"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getCompletReading_child",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2OTA0NjcyOTYsImV4cCI6MTY5MDQ3MDg5NiwibmJmIjoxNjkwNDY3Mjk2LCJqdGkiOiJYb3VrT0x4aERkYlZmR3RpIiwic3ViIjoiNiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.vF7hi4IxzwLALHkXIoiaA1IufLJ1aEbO2MimD3kpZKg",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/api/getCompletReading_child",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"getCompletReading_child"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "evaluation_child",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2OTA0NjcyOTYsImV4cCI6MTY5MDQ3MDg5NiwibmJmIjoxNjkwNDY3Mjk2LCJqdGkiOiJYb3VrT0x4aERkYlZmR3RpIiwic3ViIjoiNiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.vF7hi4IxzwLALHkXIoiaA1IufLJ1aEbO2MimD3kpZKg",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "evaluation",
+											"value": "3",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/evaluation_child",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"evaluation_child"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Admin",
+					"item": [
+						{
+							"name": "Most_Liked_Book",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2OTAyMTg3NzMsImV4cCI6MTY5MDIyMjM3MywibmJmIjoxNjkwMjE4NzczLCJqdGkiOiJLWktMODVxQTZ4NHNmdDh5Iiwic3ViIjoiNiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.TJE4D517AsXB59u-a9Tij1BVb1SxnMYw2wpOHgqV4eU",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/Most_Liked_Book",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"Most_Liked_Book"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Most_Reading_Book",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2OTAyMTg3NzMsImV4cCI6MTY5MDIyMjM3MywibmJmIjoxNjkwMjE4NzczLCJqdGkiOiJLWktMODVxQTZ4NHNmdDh5Iiwic3ViIjoiNiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.TJE4D517AsXB59u-a9Tij1BVb1SxnMYw2wpOHgqV4eU",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/Most_Reading_Book",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"Most_Reading_Book"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Getsuggestion",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2ODU3MzgxMTIsImV4cCI6MTY4NTc0MTcxMiwibmJmIjoxNjg1NzM4MTEyLCJqdGkiOiJGampMc01jbW14R3Vmcmd4Iiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.6mxWkF_nNbXVJFhKoeJNrmgW5VozFzFVssT_Dv2mYow",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/Getsuggestion",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"Getsuggestion"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Getpopularity",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2OTAyMTg3NzMsImV4cCI6MTY5MDIyMjM3MywibmJmIjoxNjkwMjE4NzczLCJqdGkiOiJLWktMODVxQTZ4NHNmdDh5Iiwic3ViIjoiNiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.TJE4D517AsXB59u-a9Tij1BVb1SxnMYw2wpOHgqV4eU",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/Getpopularity",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"Getpopularity"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "completed_goals_month",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2OTAyMTg3NzMsImV4cCI6MTY5MDIyMjM3MywibmJmIjoxNjkwMjE4NzczLCJqdGkiOiJLWktMODVxQTZ4NHNmdDh5Iiwic3ViIjoiNiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.TJE4D517AsXB59u-a9Tij1BVb1SxnMYw2wpOHgqV4eU",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/completed_goals_month",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"completed_goals_month"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "completed_goals_week",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2OTAyMTg3NzMsImV4cCI6MTY5MDIyMjM3MywibmJmIjoxNjkwMjE4NzczLCJqdGkiOiJLWktMODVxQTZ4NHNmdDh5Iiwic3ViIjoiNiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.TJE4D517AsXB59u-a9Tij1BVb1SxnMYw2wpOHgqV4eU",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/completed_goals_week",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"completed_goals_week"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "numbers",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2OTAyMTg3NzMsImV4cCI6MTY5MDIyMjM3MywibmJmIjoxNjkwMjE4NzczLCJqdGkiOiJLWktMODVxQTZ4NHNmdDh5Iiwic3ViIjoiNiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.TJE4D517AsXB59u-a9Tij1BVb1SxnMYw2wpOHgqV4eU",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/api/numbers",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"numbers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "topuser",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2OTAyMTg3NzMsImV4cCI6MTY5MDIyMjM3MywibmJmIjoxNjkwMjE4NzczLCJqdGkiOiJLWktMODVxQTZ4NHNmdDh5Iiwic3ViIjoiNiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.TJE4D517AsXB59u-a9Tij1BVb1SxnMYw2wpOHgqV4eU",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/topuser",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"topuser"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getalluser",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2OTAyMTg3NzMsImV4cCI6MTY5MDIyMjM3MywibmJmIjoxNjkwMjE4NzczLCJqdGkiOiJLWktMODVxQTZ4NHNmdDh5Iiwic3ViIjoiNiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.TJE4D517AsXB59u-a9Tij1BVb1SxnMYw2wpOHgqV4eU",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/getalluser",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"getalluser"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "adduser",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2OTAyMTg3NzMsImV4cCI6MTY5MDIyMjM3MywibmJmIjoxNjkwMjE4NzczLCJqdGkiOiJLWktMODVxQTZ4NHNmdDh5Iiwic3ViIjoiNiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.TJE4D517AsXB59u-a9Tij1BVb1SxnMYw2wpOHgqV4eU",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "username",
+											"value": "razan",
+											"type": "default"
+										},
+										{
+											"key": "email",
+											"value": "razana@gmail.com",
+											"type": "default"
+										},
+										{
+											"key": "password",
+											"value": "1234567890",
+											"type": "default"
+										},
+										{
+											"key": "role",
+											"value": "adult",
+											"type": "default"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/Aya/Pictures/الالوان والاستجابات البشرية.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/adduser",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"adduser"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteuser",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzMyNzMyNTEsImV4cCI6MTc3MzI3Njg1MiwibmJmIjoxNzczMjczMjUyLCJqdGkiOiJXd0tteHpoSXladXZyZm41Iiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.VdIXEFlbP5ZqlojGCB4OMtqhh_qDEYwVtSIGn-WltuM",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "localhost:8000/api/deleteuser/2",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"deleteuser",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getallbooks",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2OTAyMTg3NzMsImV4cCI6MTY5MDIyMjM3MywibmJmIjoxNjkwMjE4NzczLCJqdGkiOiJLWktMODVxQTZ4NHNmdDh5Iiwic3ViIjoiNiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.TJE4D517AsXB59u-a9Tij1BVb1SxnMYw2wpOHgqV4eU",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/getallbooks",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"getallbooks"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "addbook",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2OTAyMTg3NzMsImV4cCI6MTY5MDIyMjM3MywibmJmIjoxNjkwMjE4NzczLCJqdGkiOiJLWktMODVxQTZ4NHNmdDh5Iiwic3ViIjoiNiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.TJE4D517AsXB59u-a9Tij1BVb1SxnMYw2wpOHgqV4eU",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "book_name",
+											"value": "namebook",
+											"type": "default"
+										},
+										{
+											"key": "author",
+											"value": "aya",
+											"type": "default"
+										},
+										{
+											"key": "rate",
+											"value": "2.3",
+											"type": "default"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/Aya/Pictures/رحلة في عالم الموضة.png"
+										},
+										{
+											"key": "book_details",
+											"value": "oo",
+											"type": "default"
+										},
+										{
+											"key": "path",
+											"type": "file",
+											"src": "/C:/Users/Aya/Documents/أية موسى-براءة دلي حسن-أمين النصيرات-وائل دردر-انس الهيمد.pdf"
+										},
+										{
+											"key": "category_name",
+											"value": "روايات",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/addbook",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"addbook"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deletebook",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2OTAyMTg3NzMsImV4cCI6MTY5MDIyMjM3MywibmJmIjoxNjkwMjE4NzczLCJqdGkiOiJLWktMODVxQTZ4NHNmdDh5Iiwic3ViIjoiNiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.TJE4D517AsXB59u-a9Tij1BVb1SxnMYw2wpOHgqV4eU",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/deletebook/60",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"deletebook",
+										"60"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updatebook",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2OTAyMTg3NzMsImV4cCI6MTY5MDIyMjM3MywibmJmIjoxNjkwMjE4NzczLCJqdGkiOiJLWktMODVxQTZ4NHNmdDh5Iiwic3ViIjoiNiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.TJE4D517AsXB59u-a9Tij1BVb1SxnMYw2wpOHgqV4eU",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "book_name",
+											"value": "ayaa",
+											"type": "default"
+										},
+										{
+											"key": "author",
+											"value": "ayyy",
+											"type": "default"
+										},
+										{
+											"key": "rate",
+											"value": "8",
+											"type": "default"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/Aya/Pictures/الفيلسوف.png"
+										},
+										{
+											"key": "path",
+											"type": "file",
+											"src": "/C:/Users/Aya/Documents/أية موسى-براءة دلي حسن-أمين النصيرات-وائل دردر-انس الهيمد.pdf"
+										},
+										{
+											"key": "book_details",
+											"value": "fghjk",
+											"type": "default"
+										},
+										{
+											"key": "category_name",
+											"value": "روايات",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/updatebook/66",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"updatebook",
+										"66"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getallAudiobooks",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzMyNzMyNTEsImV4cCI6MTc3MzI3Njg1MiwibmJmIjoxNzczMjczMjUyLCJqdGkiOiJXd0tteHpoSXladXZyZm41Iiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.VdIXEFlbP5ZqlojGCB4OMtqhh_qDEYwVtSIGn-WltuM",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "localhost:8000/api/getallAudiobooks",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"getallAudiobooks"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "addAudiobook",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzMyNzMyNTEsImV4cCI6MTc3MzI3Njg1MiwibmJmIjoxNzczMjczMjUyLCJqdGkiOiJXd0tteHpoSXladXZyZm41Iiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.VdIXEFlbP5ZqlojGCB4OMtqhh_qDEYwVtSIGn-WltuM",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "audio1",
+											"type": "text"
+										},
+										{
+											"key": "author",
+											"value": "author",
+											"type": "text"
+										},
+										{
+											"key": "rate",
+											"value": "4.00",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "postman-cloud:///1ef571bd-bd30-4d30-8a51-c7e7d8533417"
+										},
+										{
+											"key": "path",
+											"type": "file",
+											"src": []
+										},
+										{
+											"key": "book_details",
+											"value": "evfdrew2qedvfedwqedfeded",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:8000/api/addAudiobook",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"addAudiobook"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteAudiobook",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzMyNzMyNTEsImV4cCI6MTc3MzI3Njg1MiwibmJmIjoxNzczMjczMjUyLCJqdGkiOiJXd0tteHpoSXladXZyZm41Iiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.VdIXEFlbP5ZqlojGCB4OMtqhh_qDEYwVtSIGn-WltuM",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/api/deleteAudiobook/2",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"deleteAudiobook",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateAudiobook",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NzMyNzMyNTEsImV4cCI6MTc3MzI3Njg1MiwibmJmIjoxNzczMjczMjUyLCJqdGkiOiJXd0tteHpoSXladXZyZm41Iiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.VdIXEFlbP5ZqlojGCB4OMtqhh_qDEYwVtSIGn-WltuM",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "فن اللامبالاة",
+											"type": "text"
+										},
+										{
+											"key": "author",
+											"value": "مارك مانسون",
+											"type": "text"
+										},
+										{
+											"key": "rate",
+											"value": "4.0",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "postman-cloud:///1ef571bd-bd30-4d30-8a51-c7e7d8533417"
+										},
+										{
+											"key": "path",
+											"type": "file",
+											"src": []
+										},
+										{
+											"key": "book_details",
+											"value": "ظل يُقال لنا طيلة عشرات السنوات إن التفكير الإيجابي هو المفتاح إلى حياة سعيدة ثرية. لكن مارك مانسون يشتم تلك \" الإيجابية \" ويقول: \" فلنكن صادقين، السيء سيء وعلينا أن نتعايش مع هذا \". لا يتهرّب مانسون من الحقائق ولا يغفلها بالسكّر، بل يقولها لنا كما هي: جرعة من الحقيقة الفجِّة الصادقة المنعشة هي ما ينقصنا اليوم. هذا الكتاب ترياق للذهنية التي نهدهد أنفسنا بها، ذهنية \" فلنعمل على أن يكون لدينا كلنا شعور طيب \" التي غزت المجتمع المعاصر فأفسدت جيلًا بأسره صار ينال ميداليات ذهبية لمجرد الحضور إلى المدرسة.\n\n            ينصحنا مانسون بأن نعرف حدود إمكاناتنا وأن نتقبلها. وأن ندرك مخاوفنا ونواقصنا وما لسنا واثقين منه، وأن نكفّ عن التهرب والفرار من ذلك كله ونبدأ مواجهة الحقائق الموجعة، حتى نصير قادرين على العثور على ما نبحث عنه من جرأة ومثابرة وصدق ومسؤولية وتسامح وحب للمعرفة.\n            لا يستطيع كل شخص أن يكون متميزًا متفوقًا. ففي المجتمع ناجحين وفاشلين؛ وقسم من هذا الواقع ليس عادلًا وليس نتيجة غلطتك أنت.\n            وصحيح أن المال شيء حسن، لكن اهتمامك بما تفعله بحياتك أحسن كثيرًا؛ فالتجربة هي الثروة الحقيقية.\n\n            إنها لحظة حديث حقيقي صادق لشخص يمسكك من كتفيك وينظر في عينيك. هذا الكتاب صفعة \" منعشة لهذا الجيل حتى تساعده في عيش حياة راضية مستقرة.",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:8000/api/updateAudiobook/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"updateAudiobook",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvcmVnaXN0ZXIiLCJpYXQiOjE2ODQ0MTg0MzgsImV4cCI6MTY4NDQyMjAzOCwibmJmIjoxNjg0NDE4NDM4LCJqdGkiOiJLVndsMWlKNGQ4ajZPdGFhIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.uHEbzgHkzCVkAgh46G1oFAcfWoQE0sYJvDBFx838_Xc",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:8000/api/auth/login?password=aya00000&email=ayamoo@gmail.com",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							],
+							"query": [
+								{
+									"key": "password",
+									"value": "aya00000"
+								},
+								{
+									"key": "email",
+									"value": "ayamoo@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/auth/logout?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2ODM3Mzc1OTgsImV4cCI6MTY4Mzc0MTE5OCwibmJmIjoxNjgzNzM3NTk4LCJqdGkiOiJNZWpaRlNpUGdjaGVtWkVHIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.h3GpnqsEvay1VZ9KoR0RxfxuFuxfpLhydVGspg6xq_4",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"logout"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2ODM3Mzc1OTgsImV4cCI6MTY4Mzc0MTE5OCwibmJmIjoxNjgzNzM3NTk4LCJqdGkiOiJNZWpaRlNpUGdjaGVtWkVHIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.h3GpnqsEvay1VZ9KoR0RxfxuFuxfpLhydVGspg6xq_4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "localhost:8000/api/auth/register?username=reem&email=baraa@gmail.com&password=ygvfrdx&role=adult",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "reem"
+								},
+								{
+									"key": "email",
+									"value": "baraa@gmail.com"
+								},
+								{
+									"key": "password",
+									"value": "ygvfrdx"
+								},
+								{
+									"key": "role",
+									"value": "adult"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ForgatePassword",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "ayamoo395@gmail.com",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8000/api/password/email",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"password",
+								"email"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "ayamoo395@gmail.com",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CodeCheck",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "code",
+									"value": "475737",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8000/api/CodeCheck",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"CodeCheck"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ResetPassword",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "code",
+									"value": "893594",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "aya000000",
+									"type": "default"
+								},
+								{
+									"key": "password confirmation",
+									"value": "aya000000",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8000/api/ResetPassword",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"ResetPassword"
+							],
+							"query": [
+								{
+									"key": "code",
+									"value": "625296",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "reemwe",
+									"disabled": true
+								},
+								{
+									"key": "password confirmation",
+									"value": "reemwe",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"value": "",
+			"type": "default",
+			"disabled": true
+		}
+	]
+}
