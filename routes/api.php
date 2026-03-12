@@ -50,7 +50,7 @@ Route::middleware(['auth:api','userrole:child'])->group(function(){
     Route::get('/getEntertainingbooks',[ChildController::class,'getEntertainingbooks']);
     Route::post('/favorite',[FavoriteController::class,'store_and_deletFavorite']);
     Route::get('/getbookfavorite',[FavoriteController::class,'getUserFavorites']);
-    Route::post('/add',[NowReadungController::class,'add_now_reading']);
+    Route::post('/add_now_reading_Child',[NowReadungController::class,'add_now_reading']);
     Route::get('/getUserNowReading',[NowReadungController::class,'getUserNowReading']);
     Route::post('/AddSuggestchild',[UserController::class,'AddSuggest']);
     Route::post('/evaluation_child',[UserController::class,'evaluation']);
@@ -59,11 +59,11 @@ Route::middleware(['auth:api','userrole:child'])->group(function(){
 Route::middleware(['auth:api', 'userrole:adult'])->group(function () {
    Route::get('/getAllCategory',[BookController::class,'getAllCategory']);
     Route::get('/getAllbooks',[BookController::class,'getallbooks']);
-    Route::post('/GetBooks',[BookController::class,'getbooks']);//
-    Route::post('/GetBooksDetails',[BookController::class,'getbooksdetails']);
+    Route::get('/GetBooks',[BookController::class,'getbooks']);//
+    Route::get('/GetBooksDetails',[BookController::class,'getbooksdetails']);
     Route::post('/add_now_reading',[NowReadungController::class,'add_now_reading']);
     Route::get('/getUserNowReading',[NowReadungController::class,'getUserNowReading']);
-    Route::post('/CompletReading',[NowReadungController::class,'CompletReading']);
+    Route::get('/CompletReading',[NowReadungController::class,'CompletReading']);
     Route::post('/store_and_deletFavorite',[FavoriteController::class,'store_and_deletFavorite']);
     Route::get('/getUserFavorites', [FavoriteController::class, 'getUserFavorites']);
     Route::get('/getAudioBook',[BookController::class,'getAudioBook']);
@@ -78,12 +78,12 @@ Route::middleware(['auth:api', 'userrole:adult'])->group(function () {
     Route::delete('/deletqoute/{id}',[UserController::class,'deletqoute']);
     Route::get('/getqoute',[UserController::class,'getqoute']);
     Route::post('/addLikeToBook',[UserController::class,'addLikeToBook']);
-    Route::post('/getcountlike',[UserController::class,'getcountlike']);
+    Route::get('/getcountlike',[UserController::class,'getcountlike']);
     Route::post('/addComment',[UserController::class,'addComment']);
-    Route::post('/getComments',[UserController::class,'getComments']);
+    Route::get('/getComments',[UserController::class,'getComments']);
     Route::delete('/deletecomment/{id}',[UserController::class,'deletecomment']);
     Route::post('/addReply',[UserController::class,'addReply']);
-    Route::post('/getReplay',[UserController::class,'getReplay']);
+    Route::get('/getReplay',[UserController::class,'getReplay']);
     Route::get('/getMyQuestions',[UserController::class,'getMyQuestions']);
     Route::get('/checkgoal',[UserController::class,'checkgoal']);
     Route::post('/set_goal',[UserController::class,'set_goal']);
@@ -103,10 +103,10 @@ Route::middleware(['auth:api', 'userrole:adult'])->group(function () {
       Route::get('/Getpopularity',[AdminController::class,'popularity']);
       Route::get('/completed_goals_month',[AdminController::class,'completed_goals_month']);
       Route::get('/completed_goals_week',[AdminController::class,'completed_goals_week']);
-      Route::get('/Book_Number',[AdminController::class,'Book_Number']);
-      Route::get('/getapprate',[AdminController::class,'getapprate']);
-      Route::get('/AudioBook_Number',[AdminController::class,'AudioBook_Number']);
-      Route::get('/User_Number',[AdminController::class,'User_Number']);
+      //Route::get('/Book_Number',[AdminController::class,'Book_Number']);
+      //Route::get('/getapprate',[AdminController::class,'getapprate']);
+      //Route::get('/AudioBook_Number',[AdminController::class,'AudioBook_Number']);
+      //Route::get('/User_Number',[AdminController::class,'User_Number']);
       Route::get('/topuser',[AdminController::class,'topuser']);
       ///
       Route::get('/getalluser',[AdminController::class,'getalluser']);
