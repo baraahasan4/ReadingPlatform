@@ -116,6 +116,9 @@ app/
 
 ---
 
+Full API documentation available via [Postman Collection](./postman/Reading_Platform.postman_collection.json)
+
+
 ## 👨‍💻 Author
 
 **Baraa Hasan**
